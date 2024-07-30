@@ -2,6 +2,7 @@ package presenter;
 
 import java.util.List;
 import model.*;
+import observer.Observer;
 import view.DadosTempoView;
 
 /**
@@ -9,7 +10,7 @@ import view.DadosTempoView;
  * @author Pedro Henrique Passos Rocha
  */
 
-public class DadosTempoPresenter {
+public class DadosTempoPresenter implements Observer{
     
     private final ClimaModel model;
     private final DadosTempoView view;
@@ -35,5 +36,11 @@ public class DadosTempoPresenter {
         for (Clima c : climaList) {
             System.out.println(c);
         }
+    }
+
+    @Override
+    public void update(Clima info) {
+        model.addClima(info);
+        
     }
 }

@@ -21,7 +21,6 @@ public class RegistrosView extends javax.swing.JInternalFrame implements Observe
         initComponents();
         presenter = new RegistrosPresenter(model, this);
         this.model = model;
-        model.addObserver(this);
         presenter.mostrarDados();
     }
 
@@ -114,7 +113,7 @@ public class RegistrosView extends javax.swing.JInternalFrame implements Observe
     }
 
     @Override
-    public void update() {
+    public void update(Clima clima) {
         presenter.mostrarDados();
     }
     

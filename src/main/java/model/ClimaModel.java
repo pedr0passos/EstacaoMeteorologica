@@ -10,39 +10,25 @@ import observer.Observer;
  * @author Catterina Salvador
  */
 
-public class ClimaModel implements Observable {
+public class ClimaModel implements Observer {
     
     private List<Clima> climaList = new ArrayList<>();
-    private List<Observer> observers = new ArrayList<>();
     
     public void addClima(Clima clima) {
         climaList.add(clima);
-        notificaObservers();
+        System.out.println(getClimaList().toString());
     }
     
     public void removeClima(Clima clima) {
         climaList.remove(clima);
-        notificaObservers();
     }
     
     public List<Clima> getClimaList() {
         return climaList;
     }
-    
-    @Override
-    public void addObserver (Observer observer) {
-        observers.add(observer);
-    }
-    
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
 
     @Override
-    public void notificaObservers() {
-        for (Observer observer : observers) {
-            observer.update();
-        }
+    public void update(Clima info) {
+        addClima(info);
     }
 }

@@ -1,7 +1,10 @@
 package view;
 
-import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
+import model.Clima;
 import model.ClimaModel;
+import observer.Observable;
 import observer.Observer;
 import presenter.DadosTempoPresenter;
 
@@ -10,14 +13,15 @@ import presenter.DadosTempoPresenter;
  * @author Pedro Henrique Passos Rocha
  */
 
-public class DadosTempoView extends javax.swing.JInternalFrame implements Observer {
+public class DadosTempoView extends javax.swing.JInternalFrame  {
 
     private DadosTempoPresenter presenter;
+    private List<Observer> observers = new ArrayList<>();
     
     public DadosTempoView(ClimaModel model) {
         initComponents();
         this.presenter = new DadosTempoPresenter(model, this);
-        model.addObserver(this);
+        addObserver(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -81,12 +85,13 @@ public class DadosTempoView extends javax.swing.JInternalFrame implements Observ
         Double umidade = Double.valueOf(txtUmidade.getText());
         Double pressao = Double.valueOf(txtPressao.getText());
         
-        presenter.adicionarDados(data, temperatura, umidade, pressao);
+        Clima clima = new Clima(data, temperatura, umidade, pressao);
+        
+        notificaObservers(clima);
+        
+        //presenter.adicionarDados(data, temperatura, umidade, pressao);
     }//GEN-LAST:event_btnIncluirActionPerformed
 
-    @Override
-    public void update() {
-    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIncluir;
@@ -99,4 +104,19 @@ public class DadosTempoView extends javax.swing.JInternalFrame implements Observ
     private javax.swing.JTextField txtTemperatura;
     private javax.swing.JTextField txtUmidade;
     // End of variables declaration//GEN-END:variables
+
+    public void addObserver (ClimaModel model) {
+        observers.add(model);
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    public void notificaObservers(Clima info) {
+        for (Observer observer : observers) {
+            observer.update(info);
+        }
+    }
+
 }

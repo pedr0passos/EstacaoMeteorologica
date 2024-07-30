@@ -4,6 +4,9 @@
  */
 package observer;
 
+import model.Clima;
+import model.ClimaModel;
+
 /**
  *
  * @author Catterina Salvador
@@ -12,5 +15,5 @@ package observer;
 public interface Observable {
     void addObserver(Observer observer);
     void removeObserver(Observer observer);
-    void notificaObservers();
+    void notificaObservers(Clima info);
 }
