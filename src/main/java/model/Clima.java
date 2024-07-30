@@ -1,19 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 /**
- *
  * @author Catterina Salvador
+ * @author pedro
  */
+
 public class Clima {
+    
     private String data;
     private Double temperatura;
     private Double umidade;
     private Double pressao;
-
+    
     public Clima(String data, Double temperatura, Double umidade, Double pressao) {
         this.data = data;
         this.temperatura = temperatura;
@@ -52,6 +50,5 @@ public class Clima {
     public void setPressao(Double pressao) {
         this.pressao = pressao;
     }
-    
-    
+
 }

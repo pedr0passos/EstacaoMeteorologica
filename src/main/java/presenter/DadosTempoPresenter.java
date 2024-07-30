@@ -1,24 +1,25 @@
 package presenter;
 
-import java.util.HashSet;
-import model.DadosTempoModel;
+import java.util.List;
+import model.*;
 import view.DadosTempoView;
 
 /**
- *
- * @author pedro
+ * @author Catterina Salvador
+ * @author Pedro Henrique Passos Rocha
  */
+
 public class DadosTempoPresenter {
     
-    private final DadosTempoModel model;
+    private final ClimaModel model;
     private final DadosTempoView view;
 
-    public DadosTempoPresenter(DadosTempoModel model, DadosTempoView view) {
+    public DadosTempoPresenter(ClimaModel model, DadosTempoView view) {
         this.model = model;
         this.view = view;
     }
 
-    public DadosTempoModel getModel() {
+    public ClimaModel getModel() {
         return model;
     }
 
@@ -26,10 +27,13 @@ public class DadosTempoPresenter {
         return view;
     }
     
-    public void salvarModel() {
-        model.getDados().setData(view.getTxtData());
-        model.getDados().setUmidade(view.getTxtUmidade());
-        model.getDados().setTemperatura(view.getTxtTemperatura());
-        model.getDados().setPressao(view.getTxtPressao());
+    public void adicionarDados(String data, Double temperatura, Double umidade, Double pressao) {
+        var clima = new Clima(data, temperatura, umidade, pressao);
+        model.addClima(clima);
+        List<Clima> climaList = model.getClimaList();
+
+        for (Clima c : climaList) {
+            System.out.println(c);
+        }
     }
 }

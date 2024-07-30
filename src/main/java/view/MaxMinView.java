@@ -1,6 +1,6 @@
 package view;
 
-import model.MaxMinModel;
+import model.ClimaModel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -11,21 +11,22 @@ import org.jfree.data.category.DefaultCategoryDataset;
  *
  * @author pedro
  */
+
 public class MaxMinView extends javax.swing.JInternalFrame {
 
     public MaxMinView() {
         initComponents();
     }
 
-    public void criarGrafico(MaxMinModel maxMin) {
+    public void criarGrafico(ClimaModel maxMin) {
         var gBarra = new DefaultCategoryDataset();
         
-        gBarra.setValue(maxMin.getTemperaturaMin(), "Temp Mínima", "");
-        gBarra.setValue(maxMin.getTemperaturaMax(), "Temp Máxima", "");
-        gBarra.setValue(maxMin.getPressaoaMin(), "Pressão Mínima", "");
-        gBarra.setValue(maxMin.getPressaoMax(), "Pressão Máxima", "");
-        gBarra.setValue(maxMin.getUmidadeMin(), "Umidade Mínima", "");
-        gBarra.setValue(maxMin.getUmidadeMax(), "Umidade Máxima", "");
+//        gBarra.setValue(maxMin.getTemperaturaMin(), "Temp Mínima", "");;
+//        gBarra.setValue(maxMin.getTemperaturaMax(), "Temp Máxima", "");
+//        gBarra.setValue(maxMin.getPressaoaMin(), "Pressão Mínima", "");
+//        gBarra.setValue(maxMin.getPressaoMax(), "Pressão Máxima", "");
+//        gBarra.setValue(maxMin.getUmidadeMin(), "Umidade Mínima", "");
+//        gBarra.setValue(maxMin.getUmidadeMax(), "Umidade Máxima", "");
         
         JFreeChart grafico = ChartFactory.createBarChart(
                 "A", "B", "C", gBarra, 

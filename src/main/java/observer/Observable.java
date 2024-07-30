@@ -8,6 +8,7 @@ package observer;
  *
  * @author Catterina Salvador
  */
+
 public interface Observable {
     void addObserver(Observer observer);
     void removeObserver(Observer observer);

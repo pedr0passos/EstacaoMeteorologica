@@ -1,8 +1,7 @@
 package main;
 
 import javax.swing.*;
-import model.DadosTempoModel;
-import presenter.DadosTempoPresenter;
+import model.ClimaModel;
 import view.*;
 
 public class Main {
@@ -10,20 +9,20 @@ public class Main {
         
         var estacaoView = new EstacaoView();
         var desktopPane = estacaoView.getMainPane();
+        var climaModel = new ClimaModel();
         
         estacaoView.setVisible(true);
-        
-        var dadosTempoView = new DadosTempoView();
-        var dadosMediosView = new DadosMediosView();
-        var maxMinView = new MaxMinView();
-        var registrosView = new RegistrosView();
-        var ultimaAtualizacaoView = new UltimaAtualizacaoView();
+
+        var dadosTempoView = new DadosTempoView(climaModel);
+        var registrosView = new RegistrosView(climaModel);
         
         addInternalFrame(dadosTempoView, desktopPane);
-        addInternalFrame(dadosMediosView, desktopPane);
-        addInternalFrame(maxMinView, desktopPane);
         addInternalFrame(registrosView, desktopPane);
-        addInternalFrame(ultimaAtualizacaoView, desktopPane);
+        
+        /* addInternalFrame(dadosMediosView, desktopPane);;
+        addInternalFrame(maxMinView, desktopPane);
+
+        addInternalFrame(ultimaAtualizacaoView, desktopPane); */
     }
     
     public static void addInternalFrame(JInternalFrame internalFrame, JDesktopPane desktopPane) {
