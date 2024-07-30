@@ -1,5 +1,10 @@
 package view;
 
+import model.MaxMinModel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
@@ -12,8 +17,23 @@ public class MaxMinView extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-    public void criarGrafico() {
+    public void criarGrafico(MaxMinModel maxMin) {
         var gBarra = new DefaultCategoryDataset();
+        
+        gBarra.setValue(maxMin.getTemperaturaMin(), "Temp Mínima", "");
+        gBarra.setValue(maxMin.getTemperaturaMax(), "Temp Máxima", "");
+        gBarra.setValue(maxMin.getPressaoaMin(), "Pressão Mínima", "");
+        gBarra.setValue(maxMin.getPressaoMax(), "Pressão Máxima", "");
+        gBarra.setValue(maxMin.getUmidadeMin(), "Umidade Mínima", "");
+        gBarra.setValue(maxMin.getUmidadeMax(), "Umidade Máxima", "");
+        
+        JFreeChart grafico = ChartFactory.createBarChart(
+                "A", "B", "C", gBarra, 
+                PlotOrientation.VERTICAL, true, true, false
+        );
+        
+        var painel = new ChartPanel(grafico);
+        add(painel);
     }
     
     /**

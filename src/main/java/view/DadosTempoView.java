@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author pedro
@@ -81,6 +83,33 @@ public class DadosTempoView extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIncluirActionPerformed
 
+    public String getTxtData() {
+        return txtData.getText();
+    }
+
+    public Double getTxtPressao() {
+        try {
+            return Double.valueOf(txtPressao.getText());
+        } catch (NumberFormatException e) {
+            return null; 
+        }
+    }
+
+    public Double getTxtTemperatura() {
+        try {
+            return Double.valueOf(txtTemperatura.getText());
+        } catch (NumberFormatException e) {
+            return null; 
+        }
+    }
+
+    public Double getTxtUmidade() {
+        try {
+            return Double.valueOf(txtUmidade.getText());
+        } catch (NumberFormatException e) {
+            return null; 
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIncluir;

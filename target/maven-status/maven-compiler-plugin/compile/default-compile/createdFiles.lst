@@ -2,6 +2,7 @@ view\ConfiguracaoView.class
 model\RegistrosModel.class
 view\EstacaoView$1.class
 model\DadosTempoModel.class
+presenter\DadosTempoPresenter.class
 model\MaxMinModel.class
 view\UltimaAtualizacaoView.class
 view\DadosTempoView$1.class

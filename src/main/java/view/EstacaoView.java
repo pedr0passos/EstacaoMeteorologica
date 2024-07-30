@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JDesktopPane;
+
 /**
  *
  * @author pedro
@@ -36,12 +38,14 @@ public class EstacaoView extends javax.swing.JFrame {
         mainPane.setLayout(mainPaneLayout);
         mainPaneLayout.setHorizontalGroup(
             mainPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1259, Short.MAX_VALUE)
+            .addGap(0, 1260, Short.MAX_VALUE)
         );
         mainPaneLayout.setVerticalGroup(
             mainPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 576, Short.MAX_VALUE)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
+
+        getContentPane().add(mainPane, java.awt.BorderLayout.CENTER);
 
         menuBar.setDoubleBuffered(true);
 
@@ -49,17 +53,6 @@ public class EstacaoView extends javax.swing.JFrame {
         menuBar.add(btnMenuConfigurar);
 
         setJMenuBar(menuBar);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -98,6 +91,10 @@ public class EstacaoView extends javax.swing.JFrame {
                 new EstacaoView().setVisible(true);
             }
         });
+    }
+
+    public JDesktopPane getMainPane() {
+        return mainPane;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
