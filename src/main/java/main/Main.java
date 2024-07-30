@@ -1,10 +1,11 @@
 package main;
 
-import view.MainView;
+import view.EstacaoView;
 
 public class Main {
     public static void main(String[] args) {
-        MainView mainView = new MainView();
+        var mainView = new EstacaoView();
         mainView.setVisible(true);
+        
     }
 }
