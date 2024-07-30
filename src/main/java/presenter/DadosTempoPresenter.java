@@ -30,8 +30,9 @@ public class DadosTempoPresenter {
     public void adicionarDados(String data, Double temperatura, Double umidade, Double pressao) {
         var clima = new Clima(data, temperatura, umidade, pressao);
         model.addClima(clima);
+        
+        
         List<Clima> climaList = model.getClimaList();
-
         for (Clima c : climaList) {
             System.out.println(c);
         }

@@ -1,8 +1,7 @@
 package view;
 
-import javax.swing.JOptionPane;
 import model.ClimaModel;
-import observer.Observer;
+import observer.Observable;
 import presenter.DadosTempoPresenter;
 
 /**
@@ -10,7 +9,7 @@ import presenter.DadosTempoPresenter;
  * @author Pedro Henrique Passos Rocha
  */
 
-public class DadosTempoView extends javax.swing.JInternalFrame implements Observer {
+public class DadosTempoView extends javax.swing.JInternalFrame {
 
     private DadosTempoPresenter presenter;
     
@@ -86,6 +85,7 @@ public class DadosTempoView extends javax.swing.JInternalFrame implements Observ
 
     @Override
     public void update() {
+        
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
