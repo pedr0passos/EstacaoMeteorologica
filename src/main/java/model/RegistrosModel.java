@@ -12,6 +12,16 @@ import java.util.List;
  */
 public class RegistrosModel {
     private List<Clima> registrosList;
+
+    public RegistrosModel(List<Clima> registrosList) {
+        this.registrosList = registrosList;
+    }
+
+    public List<Clima> getRegistrosList() {
+        return registrosList;
+    }
     
-    
+    public void addRegistro(Clima registro){
+        this.registrosList.add(registro);
+    }
 }
