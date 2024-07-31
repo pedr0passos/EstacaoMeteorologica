@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ClimaModel {
     
-    private List<Clima> climaList = new ArrayList<>();
+    private final List<Clima> climaList = new ArrayList<>();
     
     public void addClima(Clima clima) {
         climaList.add(clima);

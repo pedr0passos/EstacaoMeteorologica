@@ -1,7 +1,6 @@
 package presenter;
 
 import java.awt.event.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JDesktopPane;
@@ -17,9 +16,9 @@ import view.DadosTempoView;
 
 public class DadosTempoPresenter {
     
-    private List<Observer> observers = new ArrayList<>();
+    private final List<Observer> observers = new ArrayList<>();
     
-    private ClimaModel model;
+    private final ClimaModel model;
     private DadosTempoView view;
     
     public DadosTempoPresenter(ClimaModel model, JDesktopPane desktopPane) {
@@ -28,11 +27,9 @@ public class DadosTempoPresenter {
         desktopPane.add(view);
     }
     
-    public void criarView() {
+    public final void criarView() {
         view = new DadosTempoView(); 
         view.setVisible(true);
-        
-        
         view.getBtnIncluir().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,7 +41,7 @@ public class DadosTempoPresenter {
                     );
                     notificaAdicao();  
                     limparDados();
-                } catch ( Exception exception) {
+                } catch ( NumberFormatException exception) {
                     exception.getStackTrace();                    
                 }
             }

@@ -12,7 +12,7 @@ import observer.Observer;
 
 public class DadosMediosPresenter implements Observer {
     
-    private ClimaModel model;
+    private final ClimaModel model;
     private DadosMediosView view;
 
     public DadosMediosPresenter(ClimaModel model, JDesktopPane desktopPane){
@@ -21,7 +21,7 @@ public class DadosMediosPresenter implements Observer {
         desktopPane.add(view);
     }
     
-    public void criarView() {
+    private void criarView() {
         this.view = new DadosMediosView();
         this.view.setVisible(true);
     }

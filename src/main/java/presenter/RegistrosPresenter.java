@@ -1,23 +1,23 @@
 package presenter;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.List;
 import javax.swing.JDesktopPane;
 import javax.swing.table.DefaultTableModel;
-import model.Clima;
-import model.ClimaModel;
+
+import model.*;
 import observer.Observer;
 import view.RegistrosView;
 
 /**
- * @author Catterina Salvador
- * @author Pedro Henrique Passos 
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos 
  */
 
 public class RegistrosPresenter implements Observer {
 
-    private ClimaModel model;
+    private final ClimaModel model;
     private RegistrosView view;
     
     public RegistrosPresenter (ClimaModel model, JDesktopPane desktopPane) {
@@ -26,7 +26,7 @@ public class RegistrosPresenter implements Observer {
         desktopPane.add(view);
     }
     
-    public void criarView() {
+    private void criarView() {
         this.view = new RegistrosView();
         this.view.setVisible(true);
         mostrarDados();

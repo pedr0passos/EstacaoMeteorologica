@@ -1,13 +1,13 @@
 package service;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+import java.time.format.*;
 import javax.swing.JOptionPane;
 
 /**
- * @author Catterina Salvador
- * @author Pedro Henrique Passos Rocha
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos Rocha
  */
 
 public class DataConverterService {
@@ -34,7 +34,6 @@ public class DataConverterService {
                     "Erro", 
                     JOptionPane.ERROR_MESSAGE
             );            
-            e.printStackTrace();
             throw new RuntimeException("Data inválida: formato incorreto. Esperado dd/MM/yyyy.", e);
         }
     }

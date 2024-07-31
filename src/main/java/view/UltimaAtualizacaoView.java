@@ -3,8 +3,9 @@ package view;
 import javax.swing.JLabel;
 
 /**
- * @author Catterina Salvador
- * @author Pedro Henrique Passos Rocha 
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos Rocha 
  */
 
 public class UltimaAtualizacaoView extends javax.swing.JInternalFrame {

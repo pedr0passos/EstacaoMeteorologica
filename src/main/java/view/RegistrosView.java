@@ -1,11 +1,11 @@
 package view;
 
-import javax.swing.JButton;
-import javax.swing.JTable;
+import javax.swing.*;
 
 /**
- * @author Catterina Salvador
- * @author Pedro Henrique Passos Rocha
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos Rocha
  */
 
 public class RegistrosView extends javax.swing.JInternalFrame {
@@ -49,11 +49,6 @@ public class RegistrosView extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tbRegistros);
 
         btnRemover.setText("Remover");
-        btnRemover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoverActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,10 +75,6 @@ public class RegistrosView extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
-
-    }//GEN-LAST:event_btnRemoverActionPerformed
 
     public JTable getTbRegistros() {
         return tbRegistros;

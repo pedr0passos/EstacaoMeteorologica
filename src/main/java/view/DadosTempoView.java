@@ -1,29 +1,20 @@
 package view;
 
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.text.MaskFormatter;
+import java.util.*;
+import javax.swing.*;
 import observer.Observer;
 
 /**
- * @author Catterina Salvador
- * @author Pedro Henrique Passos Rocha
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos Rocha
  */
 
 public class DadosTempoView extends javax.swing.JInternalFrame  {
 
     private List<Observer> observers = new ArrayList<>();
-    private MaskFormatter mfData;
     
     public DadosTempoView() {
-        try {
-            mfData = new MaskFormatter("##/##/####");
-        } catch (ParseException ex) {
-            System.out.println("Erro");
-        }
         initComponents();
     }
 
@@ -39,7 +30,7 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
         txtUmidade = new javax.swing.JTextField();
         txtPressao = new javax.swing.JTextField();
         btnIncluir = new javax.swing.JButton();
-        txtData = new javax.swing.JFormattedTextField(mfData);
+        txtData = new javax.swing.JFormattedTextField();
 
         setTitle("Dados do tempo");
         setToolTipText("");
@@ -61,11 +52,6 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
         getContentPane().add(txtPressao, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 141, 132, -1));
 
         btnIncluir.setText("Incluir");
-        btnIncluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIncluirActionPerformed(evt);
-            }
-        });
         getContentPane().add(btnIncluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 191, -1, -1));
 
         try {
@@ -73,23 +59,11 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtData.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDataActionPerformed(evt);
-            }
-        });
         getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 18, 132, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIncluirActionPerformed
-       
-    }//GEN-LAST:event_btnIncluirActionPerformed
-
-    private void txtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDataActionPerformed
+    
     public JButton getBtnIncluir() {
         return btnIncluir;
     }

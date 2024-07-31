@@ -1,22 +1,21 @@
 package presenter;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.swing.JDesktopPane;
-import model.Clima;
-import model.ClimaModel;
+import model.*;
 import observer.Observer;
 import view.*;
 
 /**
- * @author Catterina Salvador
- * @author Pedro Henrique Passos Rocha
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos Rocha
  */
 
 public class UltimaAtualizacaoPresenter implements Observer {
     
-    private ClimaModel model;
+    private final ClimaModel model;
     private UltimaAtualizacaoView view;
 
     public UltimaAtualizacaoPresenter(ClimaModel model, JDesktopPane desktopPane){
@@ -25,7 +24,7 @@ public class UltimaAtualizacaoPresenter implements Observer {
         desktopPane.add(view);
     }
     
-    public void criarView() {
+    private void criarView() {
         view = new UltimaAtualizacaoView();
         view.setVisible(true);
     }

@@ -5,6 +5,12 @@ import model.*;
 import presenter.*;
 import view.*;
 
+/**
+ * @author 
+ * Catterina Salvador
+ * Pedro Henrique Passos Rocha
+ */
+
 public class Main {
     public static void main(String[] args) {
         var estacaoView = new EstacaoView();

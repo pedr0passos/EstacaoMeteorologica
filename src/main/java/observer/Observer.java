@@ -1,7 +1,5 @@
 package observer;
 
-import model.Clima;
-
 /**
  * @author Pedro Henrique Passos Rocha
  * @author Catterina Salvador

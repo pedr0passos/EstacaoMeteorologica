@@ -16,7 +16,7 @@ import org.jfree.chart.plot.PlotOrientation;
 
 public class MaxMinPresenter implements Observer {
     
-    private ClimaModel model;
+    private final ClimaModel model;
     private MaxMinView view;
 
     public MaxMinPresenter(ClimaModel model, JDesktopPane desktopPane){
@@ -25,7 +25,7 @@ public class MaxMinPresenter implements Observer {
         desktopPane.add(view);
     }
     
-    public void criarView() {
+    private void criarView() {
         this.view = new MaxMinView();
         this.view.setVisible(true);
         criarTabela();
