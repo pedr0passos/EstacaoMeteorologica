@@ -1,25 +1,27 @@
 package model;
 
+import java.time.LocalDate;
+
 /**
  * @author Catterina Salvador
- * @author pedro
+ * @author Pedro Henrique Passos Rocha
  */
 
 public class Clima {
     
-    private String data;
+    private LocalDate data;
     private Double temperatura;
     private Double umidade;
     private Double pressao;
     
-    public Clima(String data, Double temperatura, Double umidade, Double pressao) {
+    public Clima(LocalDate data, Double temperatura, Double umidade, Double pressao) {
         this.data = data;
         this.temperatura = temperatura;
         this.umidade = umidade;
         this.pressao = pressao;
     }
 
-    public String getData() {
+    public LocalDate getData() {
         return data;
     }
 
@@ -35,7 +37,7 @@ public class Clima {
         return pressao;
     }
 
-    public void setData(String data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
@@ -51,4 +53,8 @@ public class Clima {
         this.pressao = pressao;
     }
 
+    @Override
+    public String toString() {
+        return this.data + " " + this.temperatura + " " + this.umidade + " " + this.pressao;
+    }
 }

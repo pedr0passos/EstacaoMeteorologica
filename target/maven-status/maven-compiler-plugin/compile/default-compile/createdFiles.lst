@@ -1,8 +1,10 @@
 model\ClimaModel.class
+presenter\DadosTempoPresenter$1.class
 view\ConfiguracaoView.class
 presenter\RegistrosPresenter.class
 view\EstacaoView$1.class
 presenter\DadosTempoPresenter.class
+presenter\MaxMinPresenter.class
 view\UltimaAtualizacaoView.class
 view\DadosTempoView$1.class
 view\DadosTempoView$2.class
@@ -11,9 +13,12 @@ main\Main.class
 view\EstacaoView.class
 view\MaxMinView.class
 observer\Observer.class
-observer\Observable.class
+presenter\UltimaAtualizacaoPresenter.class
+presenter\RegistrosPresenter$1.class
+presenter\DadosMediosPresenter.class
 view\RegistrosView.class
 view\RegistrosView$2.class
 model\Clima.class
+service\DataConverterService.class
 view\RegistrosView$1.class
 view\DadosMediosView.class

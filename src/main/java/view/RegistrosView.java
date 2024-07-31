@@ -1,28 +1,17 @@
 package view;
 
+import javax.swing.JButton;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import model.Clima;
-import model.ClimaModel;
-import observer.Observer;
-import presenter.RegistrosPresenter;
 
 /**
  * @author Catterina Salvador
  * @author Pedro Henrique Passos Rocha
  */
 
-public class RegistrosView extends javax.swing.JInternalFrame implements Observer {
+public class RegistrosView extends javax.swing.JInternalFrame {
 
-    private RegistrosPresenter presenter;
-    private ClimaModel model;
-    
-    public RegistrosView(ClimaModel model) {
+    public RegistrosView() {
         initComponents();
-        presenter = new RegistrosPresenter(model, this);
-        this.model = model;
-        model.addObserver(this);
-        presenter.mostrarDados();
     }
 
     @SuppressWarnings("unchecked")
@@ -93,31 +82,17 @@ public class RegistrosView extends javax.swing.JInternalFrame implements Observe
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
-        int linhaSelecionada = tbRegistros.getSelectedRow();
-        
-        if (linhaSelecionada >= 0) {
-            var tableModel = (DefaultTableModel) tbRegistros.getModel();
-            String data = (String) tableModel.getValueAt(linhaSelecionada, 0);
-            Double temperatura = (Double) tableModel.getValueAt(linhaSelecionada, 1);
-            Double umidade = (Double) tableModel.getValueAt(linhaSelecionada, 2);
-            Double pressao = (Double) tableModel.getValueAt(linhaSelecionada, 3);
-            
-            Clima clima = new Clima(data, temperatura, umidade, pressao);
-            
-            model.removeClima(clima);
-            tableModel.removeRow(linhaSelecionada);
-        }
+
     }//GEN-LAST:event_btnRemoverActionPerformed
 
     public JTable getTbRegistros() {
         return tbRegistros;
     }
 
-    @Override
-    public void update() {
-        presenter.mostrarDados();
+    public JButton getBtnRemover() {
+        return btnRemover;
     }
-    
+           
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRemover;
     private javax.swing.JScrollPane jScrollPane1;
