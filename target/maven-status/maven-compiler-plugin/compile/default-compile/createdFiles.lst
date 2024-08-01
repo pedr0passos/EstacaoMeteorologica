@@ -6,8 +6,6 @@ view\EstacaoView$1.class
 presenter\DadosTempoPresenter.class
 presenter\MaxMinPresenter.class
 view\UltimaAtualizacaoView.class
-view\DadosTempoView$1.class
-view\DadosTempoView$2.class
 view\DadosTempoView.class
 main\Main.class
 view\EstacaoView.class
@@ -17,7 +15,6 @@ presenter\UltimaAtualizacaoPresenter.class
 presenter\RegistrosPresenter$1.class
 presenter\DadosMediosPresenter.class
 view\RegistrosView.class
-view\RegistrosView$2.class
 model\Clima.class
 service\DataConverterService.class
 view\RegistrosView$1.class

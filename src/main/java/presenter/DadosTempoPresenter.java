@@ -1,8 +1,7 @@
 package presenter;
 
 import java.awt.event.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import javax.swing.JDesktopPane;
 import model.*;
 import observer.Observer;

@@ -26,40 +26,68 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
         lblTemperatura1 = new javax.swing.JLabel();
         lblUmidade1 = new javax.swing.JLabel();
         lblPressao1 = new javax.swing.JLabel();
-        txtTemperatura = new javax.swing.JTextField();
         txtUmidade = new javax.swing.JTextField();
+        txtTemperatura = new javax.swing.JTextField();
         txtPressao = new javax.swing.JTextField();
         btnIncluir = new javax.swing.JButton();
         txtData = new javax.swing.JFormattedTextField();
 
+        setBackground(new java.awt.Color(235, 235, 235));
+        setForeground(java.awt.Color.white);
         setTitle("Dados do tempo");
         setToolTipText("");
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMinimumSize(new java.awt.Dimension(355, 221));
+        setPreferredSize(new java.awt.Dimension(355, 221));
+        setVisible(true);
+        getContentPane().setLayout(null);
 
+        lblData1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblData1.setText("Data:");
-        getContentPane().add(lblData1, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 21, -1, -1));
+        getContentPane().add(lblData1);
+        lblData1.setBounds(80, 30, 32, 20);
 
+        lblTemperatura1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblTemperatura1.setText("Temperatura:");
-        getContentPane().add(lblTemperatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 61, -1, -1));
+        getContentPane().add(lblTemperatura1);
+        lblTemperatura1.setBounds(30, 60, 81, 20);
 
+        lblUmidade1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblUmidade1.setText("Umidade:");
-        getContentPane().add(lblUmidade1, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 101, -1, -1));
+        getContentPane().add(lblUmidade1);
+        lblUmidade1.setBounds(50, 120, 58, 20);
 
+        lblPressao1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblPressao1.setText("Pressão:");
-        getContentPane().add(lblPressao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 141, -1, -1));
-        getContentPane().add(txtTemperatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 61, 132, -1));
-        getContentPane().add(txtUmidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 101, 132, -1));
-        getContentPane().add(txtPressao, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 141, 132, -1));
+        getContentPane().add(lblPressao1);
+        lblPressao1.setBounds(60, 90, 50, 20);
+
+        txtUmidade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtUmidade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtUmidade);
+        txtUmidade.setBounds(120, 120, 190, 20);
+
+        txtTemperatura.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtTemperatura.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtTemperatura);
+        txtTemperatura.setBounds(120, 60, 190, 20);
+
+        txtPressao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtPressao.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtPressao);
+        txtPressao.setBounds(120, 90, 190, 20);
 
         btnIncluir.setText("Incluir");
-        getContentPane().add(btnIncluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 191, -1, -1));
+        getContentPane().add(btnIncluir);
+        btnIncluir.setBounds(240, 150, 72, 23);
 
         try {
             txtData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 18, 132, -1));
+        txtData.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtData);
+        txtData.setBounds(120, 30, 190, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

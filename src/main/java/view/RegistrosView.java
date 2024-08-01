@@ -24,6 +24,7 @@ public class RegistrosView extends javax.swing.JInternalFrame {
 
         setTitle("Registros");
 
+        tbRegistros.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tbRegistros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

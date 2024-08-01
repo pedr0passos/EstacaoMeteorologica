@@ -28,6 +28,8 @@ public class EstacaoView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Estação Climática");
 
+        mainPane.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout mainPaneLayout = new javax.swing.GroupLayout(mainPane);
         mainPane.setLayout(mainPaneLayout);
         mainPaneLayout.setHorizontalGroup(
@@ -49,6 +51,7 @@ public class EstacaoView extends javax.swing.JFrame {
         setJMenuBar(menuBar);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     public static void main(String args[]) {      
