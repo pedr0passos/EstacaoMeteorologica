@@ -1,17 +1,22 @@
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\model\ClimaModel.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\DadosTempoView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\ConfiguracaoView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\presenter\DadosTempoPresenter.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\EstacaoView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\MaxMinView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\presenter\DadosMediosPresenter.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\presenter\UltimaAtualizacaoPresenter.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\RegistrosView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\observer\Observer.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\UltimaAtualizacaoView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\main\Main.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\view\DadosMediosView.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\service\DataConverterService.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\model\Clima.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\presenter\RegistrosPresenter.java
-C:\Users\pedro\OneDrive\UFES\6º Semestre\Projeto de Sistemas de Software\Projetos\EstacaoMeteorologica\src\main\java\presenter\MaxMinPresenter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\EstacaoView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\UltimaAtualizacaoView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\log\Log.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\log\XmlLog.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\DadosMediosView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\log\JsonAdapter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\presenter\RegistrosPresenter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\presenter\UltimaAtualizacaoPresenter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\DadosTempoView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\model\Clima.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\MaxMinView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\main\Main.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\log\XmlAdapter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\presenter\DadosMediosPresenter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\presenter\MaxMinPresenter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\presenter\DadosTempoPresenter.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\service\DataConverterService.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\log\JsonLog.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\RegistrosView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\observer\Observer.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\view\ConfiguracaoView.java
+C:\Users\NOTE136\Documents\GitHub\EstacaoMeteorologica\src\main\java\model\ClimaModel.java

@@ -1,0 +1,8 @@
+<log>
+	<dataHora>2024-07-31T19:43:23.223042800</dataHora>
+	<operacao>DATA</operacao>
+</log>
+<log>
+	<dataHora>2024-07-31T19:46:48.435016900</dataHora>
+	<operacao>DATA</operacao>
+</log>

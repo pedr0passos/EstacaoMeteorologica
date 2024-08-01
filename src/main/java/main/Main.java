@@ -1,6 +1,11 @@
 package main;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
+import log.JsonLog;
+import log.XmlLog;
 import model.*;
 import presenter.*;
 import view.*;
@@ -29,6 +34,10 @@ public class Main {
         dadosTempoPresenter.addObserver(dadosMediosPresenter);
         dadosTempoPresenter.addObserver(ultimaAtualizacaoPresenter);
         dadosTempoPresenter.addObserver(maxMinPresenter);
+        
+        registrosPresenter.addObserver(dadosMediosPresenter);
+        registrosPresenter.addObserver(ultimaAtualizacaoPresenter);
+        registrosPresenter.addObserver(maxMinPresenter);
     }
     
     public static void addInternalFrame(JInternalFrame internalFrame, JDesktopPane desktopPane, boolean visible) {

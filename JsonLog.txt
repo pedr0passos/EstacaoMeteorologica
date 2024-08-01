@@ -1,0 +1,24 @@
+
+{ "log": { "dataHora" :"2024-07-31T19:59:12.873403800",	"operacao" :"DATA" } } 
+{ "log": 
+	{ "dataHora" :"2024-07-31T20:01:41.215931200",
+	"operacao" :"DATA" 
+} } 
+{ "log": 
+	{
+ "dataHora" :"2024-07-31T20:02:41.075629500",
+	"operacao" :"DATA", 
+} } 
+{ "log": 
+	{
+ "dataHora" :"2024-07-31T20:03:23.875804500",
+	"operacao" :"DATA", 
+} 	
+} 
+{ "log": 
+	{
+ "dataHora" :"2024-07-31T20:04:16.280964500",
+	"operacao" :"DATA", 
+	}
+} 
+{ "log": { "dataHora" :"2024-07-31T20:05:12.007067800",	"operacao" :"DATA" } } 

@@ -1,6 +1,7 @@
 package presenter;
 
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JDesktopPane;
 import javax.swing.table.DefaultTableModel;
@@ -17,8 +18,11 @@ import view.RegistrosView;
 
 public class RegistrosPresenter implements Observer {
 
+    private final List<Observer> observers = new ArrayList<>();
+    
     private final ClimaModel model;
     private RegistrosView view;
+    
     
     public RegistrosPresenter (ClimaModel model, JDesktopPane desktopPane) {
         this.model = model;
@@ -35,6 +39,7 @@ public class RegistrosPresenter implements Observer {
             public void actionPerformed(ActionEvent e) {
                 removerDado();
                 mostrarDados();
+                notificaRemocao();
             }
         });        
     }
@@ -63,6 +68,19 @@ public class RegistrosPresenter implements Observer {
                 clima.getPressao()
             });
         }
+    }
+    
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+    
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+    
+    public void notificaRemocao() {
+        for (Observer observer : observers ) 
+            observer.update();
     }
     
     @Override
