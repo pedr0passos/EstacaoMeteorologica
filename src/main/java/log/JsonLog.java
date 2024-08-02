@@ -25,26 +25,26 @@ public class JsonLog {
             myWriter.write("\t\"operacao\" :" + "\"" + operacao + "\" } } ");
             myWriter.write("\n");
             myWriter.close();
-            System.out.println("Successfully wrote to the file.");
+            System.out.println("Arquivo escrito com Sucesso.");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Erro.");
             e.printStackTrace();
         }
     }
 
     public File createFile() {
         try {
-            File xml = new File("src\\main\\java\\RegistrosLog","JsonLog.txt");
-            System.out.println(xml.getAbsolutePath());
-            if (xml.createNewFile()) {
-                System.out.println("File created: " + xml.getName());
-                return xml;
+            File json = new File("src\\main\\java\\RegistrosLog","JsonLog.json");
+            System.out.println(json.getAbsolutePath());
+            if (json.createNewFile()) {
+                System.out.println("Arquivo criado: " + json.getName());
+                return json;
             } else {
-                System.out.println("File already exists.");
-                return xml;
+                System.out.println("Arquivo ja existe.");
+                return json;
             }
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Erro.");
             e.printStackTrace();
             return null;
         }

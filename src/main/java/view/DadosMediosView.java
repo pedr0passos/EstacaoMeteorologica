@@ -65,7 +65,7 @@ public class DadosMediosView extends javax.swing.JInternalFrame {
         lblRegisResult.setText("0");
         getContentPane().add(lblRegisResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
 
-        pack();
+        setBounds(373, 10, 343, 221);
     }// </editor-fold>//GEN-END:initComponents
 
     public JLabel getLblPressResult() {

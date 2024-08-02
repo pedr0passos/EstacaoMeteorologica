@@ -97,7 +97,7 @@ public class UltimaAtualizacaoView extends javax.swing.JInternalFrame {
                 .addGap(19, 19, 19))
         );
 
-        pack();
+        setBounds(723, 10, 343, 221);
     }// </editor-fold>//GEN-END:initComponents
 
     public JLabel getLblDataResult() {

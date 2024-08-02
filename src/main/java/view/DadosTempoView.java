@@ -91,7 +91,7 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
         getContentPane().add(txtData);
         txtData.setBounds(120, 30, 190, 20);
 
-        pack();
+        setBounds(10, 10, 355, 221);
     }// </editor-fold>//GEN-END:initComponents
     
     public JButton getBtnIncluir() {
