@@ -22,6 +22,7 @@ public class RegistrosView extends javax.swing.JInternalFrame {
         tbRegistros = new javax.swing.JTable();
         btnRemover = new javax.swing.JButton();
 
+        setIconifiable(true);
         setTitle("Registros");
 
         tbRegistros.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -49,6 +50,7 @@ public class RegistrosView extends javax.swing.JInternalFrame {
         tbRegistros.setSurrendersFocusOnKeystroke(true);
         jScrollPane1.setViewportView(tbRegistros);
 
+        btnRemover.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRemover.setText("Remover");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -68,7 +70,7 @@ public class RegistrosView extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRemover)
                 .addContainerGap())

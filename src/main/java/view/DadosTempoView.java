@@ -34,6 +34,7 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
 
         setBackground(new java.awt.Color(235, 235, 235));
         setForeground(java.awt.Color.white);
+        setIconifiable(true);
         setTitle("Dados do tempo");
         setToolTipText("");
         setMinimumSize(new java.awt.Dimension(355, 221));
@@ -76,9 +77,10 @@ public class DadosTempoView extends javax.swing.JInternalFrame  {
         getContentPane().add(txtPressao);
         txtPressao.setBounds(120, 90, 190, 20);
 
+        btnIncluir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnIncluir.setText("Incluir");
         getContentPane().add(btnIncluir);
-        btnIncluir.setBounds(240, 150, 72, 23);
+        btnIncluir.setBounds(240, 150, 72, 27);
 
         try {
             txtData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));

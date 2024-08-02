@@ -1,13 +1,20 @@
 package presenter;
 
-import java.util.List;
-import org.jfree.chart.*;
+import org.jfree.chart.labels.StandardCategoryItemLabelGenerator;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.chart.renderer.category.*;
+import org.jfree.chart.plot.*;
+import org.jfree.chart.axis.*;
+import org.jfree.chart.*;
+
 import javax.swing.JDesktopPane;
-import view.*;
-import model.*;
+import java.util.Comparator;
+import java.util.List;
+import java.awt.*;
+
 import observer.Observer;
-import org.jfree.chart.plot.PlotOrientation;
+import model.*;
+import view.*;
 
 /**
  * @author Catterina Salvador
@@ -32,35 +39,56 @@ public class MaxMinPresenter implements Observer {
     }
     
     public void criarTabela() {
+        
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-
         List<Clima> climas = model.getClimaList();
+        
         if (!climas.isEmpty()) {
-            Double maxTemperatura = climas.get(0).getTemperatura();
-            Double minTemperatura = climas.get(0).getTemperatura();
+            Double maxTemperatura = climas.stream().max(Comparator.comparing(Clima::getTemperatura)).get().getTemperatura();
+            Double minTemperatura = climas.stream().min(Comparator.comparing(Clima::getTemperatura)).get().getTemperatura();
+            Double maxPressao = climas.stream().max(Comparator.comparing(Clima::getPressao)).get().getPressao();
+            Double minPressao = climas.stream().min(Comparator.comparing(Clima::getPressao)).get().getPressao();
+            Double maxUmidade = climas.stream().max(Comparator.comparing(Clima::getUmidade)).get().getUmidade();
+            Double minUmidade = climas.stream().min(Comparator.comparing(Clima::getUmidade)).get().getUmidade();
 
-            for (Clima clima : climas) {
-                if (clima.getTemperatura() > maxTemperatura) {
-                    maxTemperatura = clima.getTemperatura();
-                }
-                if (clima.getTemperatura() < minTemperatura) {
-                    minTemperatura = clima.getTemperatura();
-                }
-            }
-
-            dataset.addValue(maxTemperatura, "Temperatura Máxima", "");
-            dataset.addValue(minTemperatura, "Temperatura Mínima", "");
+            dataset.addValue(maxTemperatura, "Temperatura Máxima", "Temperatura");
+            dataset.addValue(minTemperatura, "Temperatura Mínima", "Temperatura");
+            dataset.addValue(maxPressao, "Pressão Máxima", "Pressão");
+            dataset.addValue(minPressao, "Pressão Mínima", "Pressão");
+            dataset.addValue(maxUmidade, "Umidade Máxima", "Umidade");
+            dataset.addValue(minUmidade, "Umidade Mínima", "Umidade");
         }
+        
         JFreeChart barChart = ChartFactory.createBarChart(
-                "Temperaturas Máximas e Mínimas",
+                "Dados Climáticos Máximos e Mínimos",
                 "Categoria",
-                "Temperatura (°C)",
+                "Valores",
                 dataset,
                 PlotOrientation.VERTICAL,
                 true, true, false);
 
+        CategoryPlot plot = (CategoryPlot) barChart.getPlot();
+        BarRenderer renderer = (BarRenderer) plot.getRenderer();
+        renderer.setBarPainter(new StandardBarPainter());
+        renderer.setSeriesPaint(0, new Color(255, 0, 0)); 
+        renderer.setSeriesPaint(1, new Color(0, 0, 255)); 
+        renderer.setSeriesPaint(2, new Color(0, 255, 0));
+        renderer.setSeriesPaint(3, new Color(255, 255, 0)); 
+        renderer.setSeriesPaint(4, new Color(255, 0, 255)); 
+        renderer.setSeriesPaint(5, new Color(0, 255, 255)); 
+        renderer.setMaximumBarWidth(0.1); 
+        renderer.setItemMargin(0.02);
+        renderer.setDefaultItemLabelGenerator(new StandardCategoryItemLabelGenerator());
+        renderer.setDefaultItemLabelsVisible(true);
+        
+        NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
+        rangeAxis.setUpperMargin(0.15); 
+        
+        CategoryAxis domainAxis = plot.getDomainAxis();
+        domainAxis.setCategoryMargin(0.1); 
+        
         ChartPanel chartPanel = new ChartPanel(barChart);
-        chartPanel.setPreferredSize(new java.awt.Dimension(560, 367));
+        chartPanel.setPreferredSize(new Dimension(560, 367));
         view.setContentPane(chartPanel);
         view.revalidate();        
     }

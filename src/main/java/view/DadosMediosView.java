@@ -27,73 +27,43 @@ public class DadosMediosView extends javax.swing.JInternalFrame {
         lblPressResult = new javax.swing.JLabel();
         lblRegisResult = new javax.swing.JLabel();
 
+        setIconifiable(true);
         setTitle("Dados médios");
-        setPreferredSize(new java.awt.Dimension(310, 310));
+        setMinimumSize(new java.awt.Dimension(343, 225));
+        setPreferredSize(new java.awt.Dimension(343, 225));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTemperatura2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblTemperatura2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTemperatura2.setText("Temperatura:");
+        getContentPane().add(lblTemperatura2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
-        lblUmidade2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUmidade2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblUmidade2.setText("Umidade:");
+        getContentPane().add(lblUmidade2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, -1));
 
-        lblPressão2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblPressão2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblPressão2.setText("Pressão:");
+        getContentPane().add(lblPressão2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, -1, -1));
 
-        lblNumRegistros.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblNumRegistros.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblNumRegistros.setText("Número de Registros:");
+        getContentPane().add(lblNumRegistros, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
-        lblTempResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblTempResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTempResult.setText("0");
+        getContentPane().add(lblTempResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
-        lblUmidResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUmidResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblUmidResult.setText("0");
+        getContentPane().add(lblUmidResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
 
-        lblPressResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblPressResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblPressResult.setText("0");
+        getContentPane().add(lblPressResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
-        lblRegisResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblRegisResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblRegisResult.setText("0");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblNumRegistros)
-                    .addComponent(lblPressão2)
-                    .addComponent(lblUmidade2)
-                    .addComponent(lblTemperatura2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTempResult)
-                    .addComponent(lblUmidResult)
-                    .addComponent(lblPressResult)
-                    .addComponent(lblRegisResult))
-                .addContainerGap(140, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTemperatura2)
-                    .addComponent(lblTempResult))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUmidade2)
-                    .addComponent(lblUmidResult))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPressão2)
-                    .addComponent(lblPressResult))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNumRegistros)
-                    .addComponent(lblRegisResult))
-                .addContainerGap(85, Short.MAX_VALUE))
-        );
+        getContentPane().add(lblRegisResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

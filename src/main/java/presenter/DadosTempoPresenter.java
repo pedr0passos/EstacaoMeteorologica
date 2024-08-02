@@ -3,9 +3,11 @@ package presenter;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.JDesktopPane;
+import log.*;
 import model.*;
 import observer.Observer;
 import service.DataConverterService;
+import service.GerenciadorLog;
 import view.DadosTempoView;
 
 /**
@@ -51,7 +53,15 @@ public class DadosTempoPresenter {
         var converter = new DataConverterService();
         var dataConvertida = converter.convertStringToLocalDate(view.getTxtData().getText());
         var clima = new Clima(dataConvertida, temperatura, umidade, pressao);
-        model.addClima(clima);            
+        model.addClima(clima);   
+        
+        var logSelecionado = model.getLogSelecionado();
+        var gerenciadorLog = new GerenciadorLog();
+        
+        if (logSelecionado.equals("Json")) 
+            gerenciadorLog.processarLogs("inclusao", new JsonAdapter(new JsonLog()));
+        else
+            gerenciadorLog.processarLogs("inclusao", new XmlAdapter(new XmlLog()));
     }
     
     public void limparDados() {

@@ -27,38 +27,41 @@ public class UltimaAtualizacaoView extends javax.swing.JInternalFrame {
         lblPressaoResult = new javax.swing.JLabel();
         lblDataResult = new javax.swing.JLabel();
 
+        setIconifiable(true);
         setTitle("Útlima atualização do tempo");
+        setMinimumSize(new java.awt.Dimension(343, 225));
+        setPreferredSize(new java.awt.Dimension(343, 225));
 
-        lblTemperatura.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblTemperatura.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTemperatura.setText("Temperatura:");
 
-        lblUmidade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUmidade.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblUmidade.setText("Umidade:");
 
-        lblPressão.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblPressão.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblPressão.setText("Pressão:");
 
-        lblData.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblData.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblData.setText("Data:");
 
-        lblTemperaturaResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblTemperaturaResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTemperaturaResult.setText("0");
 
-        lblUmidadeResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUmidadeResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblUmidadeResult.setText("0");
 
-        lblPressaoResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblPressaoResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblPressaoResult.setText("0");
 
-        lblDataResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDataResult.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDataResult.setText("Nenhuma Data");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblData)
                     .addComponent(lblPressão)
@@ -70,12 +73,12 @@ public class UltimaAtualizacaoView extends javax.swing.JInternalFrame {
                     .addComponent(lblUmidadeResult)
                     .addComponent(lblPressaoResult)
                     .addComponent(lblDataResult))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addGap(44, 44, 44))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTemperatura)
                     .addComponent(lblTemperaturaResult))
@@ -91,7 +94,7 @@ public class UltimaAtualizacaoView extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblData)
                     .addComponent(lblDataResult))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         pack();
