@@ -1,8 +1,10 @@
 package view;
 
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 
 /**
  * @author 
@@ -13,7 +15,7 @@ import javax.swing.JLabel;
 public class EstacaoView extends javax.swing.JFrame {
 
     public EstacaoView() {
-        configuraLookAndFeel();        
+        configuraLookAndFeel();    
         initComponents();
     }
 
@@ -30,6 +32,7 @@ public class EstacaoView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Estação Climática");
+        setResizable(false);
 
         mainPane.setBackground(new java.awt.Color(232, 232, 232));
 
@@ -47,20 +50,20 @@ public class EstacaoView extends javax.swing.JFrame {
         mainPaneLayout.setHorizontalGroup(
             mainPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPaneLayout.createSequentialGroup()
-                .addContainerGap(1173, Short.MAX_VALUE)
+                .addContainerGap(1220, Short.MAX_VALUE)
                 .addComponent(lblNumeroRegistros)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(lblNumeroRegistrosResult)
-                .addGap(64, 64, 64))
+                .addGap(29, 29, 29))
         );
         mainPaneLayout.setVerticalGroup(
             mainPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPaneLayout.createSequentialGroup()
-                .addContainerGap(498, Short.MAX_VALUE)
+                .addContainerGap(620, Short.MAX_VALUE)
                 .addGroup(mainPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumeroRegistros)
                     .addComponent(lblNumeroRegistrosResult))
-                .addGap(14, 14, 14))
+                .addGap(15, 15, 15))
         );
 
         getContentPane().add(mainPane, java.awt.BorderLayout.CENTER);
@@ -69,6 +72,7 @@ public class EstacaoView extends javax.swing.JFrame {
 
         btnMenuConfigurar.setText("Configurar");
 
+        mItemConfigurarLog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/engrenagem.png"))); // NOI18N
         mItemConfigurarLog.setText("Configurar Log");
         btnMenuConfigurar.add(mItemConfigurarLog);
 
@@ -100,7 +104,7 @@ public class EstacaoView extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EstacaoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }    
     }
-
+    
     public JLabel getLblNumeroRegistrosResult() {
         return lblNumeroRegistrosResult;
     }

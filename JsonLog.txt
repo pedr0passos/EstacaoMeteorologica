@@ -1,8 +1,0 @@
-{ "log": { "dataHora" :"2024-08-01T21:52:06.836550500",	"operacao" :"inclusao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:16:06.524903700",	"operacao" :"inclusao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:16:24.007628100",	"operacao" :"inclusao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:16:31.063138200",	"operacao" :"remocao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:16:52.254742100",	"operacao" :"inclusao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:17:23.513236500",	"operacao" :"inclusao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:17:43.091134300",	"operacao" :"inclusao" } } 
-{ "log": { "dataHora" :"2024-08-01T22:17:49.030105500",	"operacao" :"remocao" } } 

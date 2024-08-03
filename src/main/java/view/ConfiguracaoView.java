@@ -56,7 +56,7 @@ public class ConfiguracaoView extends javax.swing.JInternalFrame {
         btnSalvar.setText("Salvar");
         getContentPane().add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
 
-        pack();
+        setBounds(1150, 10, 290, 192);
     }// </editor-fold>//GEN-END:initComponents
 
     public JButton getBtnSalvar() {

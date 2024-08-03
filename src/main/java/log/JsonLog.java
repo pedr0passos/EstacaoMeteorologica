@@ -12,8 +12,9 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 /**
- *
- * @author Catterina Salvador
+ * @author 
+ * Pedro Henrique Passos
+ * Catterina Salvador
  */
 public class JsonLog {
     public void gravarLogJson(String operacao) throws FileNotFoundException {
@@ -34,7 +35,7 @@ public class JsonLog {
 
     public File createFile() {
         try {
-            File json = new File("src\\main\\java\\RegistrosLog","JsonLog.json");
+            File json = new File("src\\main\\java\\RegistrosLog\\JsonLog.json");
             System.out.println(json.getAbsolutePath());
             if (json.createNewFile()) {
                 System.out.println("Arquivo criado: " + json.getName());
