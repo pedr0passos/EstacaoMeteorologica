@@ -1,5 +1,6 @@
 model\ClimaModel.class
 presenter\DadosTempoPresenter$1.class
+view\EstacaoView$1.class
 presenter\ConfiguracaoPresenter.class
 log\XmlAdapter.class
 presenter\DadosTempoPresenter.class
