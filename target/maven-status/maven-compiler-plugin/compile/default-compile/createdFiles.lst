@@ -18,6 +18,7 @@ view\RegistrosView$1.class
 view\DadosMediosView.class
 view\ConfiguracaoView.class
 presenter\RegistrosPresenter.class
+utils\DateUtils.class
 log\JsonAdapter.class
 view\MaxMinView.class
 presenter\UltimaAtualizacaoPresenter.class

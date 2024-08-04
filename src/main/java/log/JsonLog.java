@@ -20,7 +20,7 @@ public class JsonLog {
     public void gravarLogJson(String operacao) throws FileNotFoundException {
         File file = createFile();
         try {
-            BufferedWriter myWriter = new BufferedWriter(new FileWriter(file.getName(), true));
+            BufferedWriter myWriter = new BufferedWriter(new FileWriter(file, true));
             myWriter.write("{ \"log\": { ");
             myWriter.write("\"dataHora\" :" + "\"" + LocalDateTime.now().toString() + "\"" + ",");
             myWriter.write("\t\"operacao\" :" + "\"" + operacao + "\" } } ");

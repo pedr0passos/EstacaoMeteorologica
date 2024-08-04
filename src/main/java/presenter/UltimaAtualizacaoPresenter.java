@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.JDesktopPane;
 import model.*;
 import observer.Observer;
+import utils.DateUtils;
 import view.*;
 
 /**
@@ -56,7 +57,7 @@ public class UltimaAtualizacaoPresenter implements Observer {
     }
     
     public void atualizarDados(LocalDate data, Double temperatura, Double umidade, Double pressao) {
-        view.getLblDataResult().setText(String.valueOf(data));
+        view.getLblDataResult().setText(DateUtils.formatDateBr(data));
         view.getLblTemperaturaResult().setText(temperatura + "°C");
         view.getLblUmidadeResult().setText(umidade + "%");
         view.getLblPressaoResult().setText(pressao + " hPa");
