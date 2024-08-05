@@ -1,6 +1,5 @@
 model\ClimaModel.class
 presenter\DadosTempoPresenter$1.class
-view\EstacaoView$1.class
 presenter\ConfiguracaoPresenter.class
 log\XmlAdapter.class
 presenter\DadosTempoPresenter.class
@@ -15,10 +14,12 @@ observer\Observer.class
 presenter\ConfiguracaoPresenter$1.class
 view\RegistrosView.class
 service\DataConverterService.class
+service\DateService.class
 view\RegistrosView$1.class
 view\DadosMediosView.class
 view\ConfiguracaoView.class
 presenter\RegistrosPresenter.class
+service\CalculadoraMediaService.class
 log\JsonAdapter.class
 view\MaxMinView.class
 presenter\UltimaAtualizacaoPresenter.class

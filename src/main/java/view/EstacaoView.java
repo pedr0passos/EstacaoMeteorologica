@@ -1,8 +1,5 @@
 package view;
 
-import java.awt.Image;
-import java.awt.Graphics;
-import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import javax.swing.JDesktopPane;
 import javax.swing.JLabel;
@@ -24,13 +21,7 @@ public class EstacaoView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ImageIcon icon = new ImageIcon(getClass().getResource("/images/servletrecuperafoto.gif"));
-        Image image = icon.getImage();
-        mainPane = new javax.swing.JDesktopPane(){
-            public void paintComponent(Graphics g) {
-                g.drawImage(image,0,0,getWidth(), getHeight(), this);
-            }
-        };
+        mainPane = new javax.swing.JDesktopPane();
         lblNumeroRegistros = new javax.swing.JLabel();
         lblNumeroRegistrosResult = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();

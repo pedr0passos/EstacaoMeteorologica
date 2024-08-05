@@ -9,6 +9,7 @@ import log.*;
 import model.*;
 import observer.Observer;
 import service.GerenciadorLog;
+import service.DateService;
 import view.RegistrosView;
 
 /**
@@ -69,8 +70,8 @@ public class RegistrosPresenter implements Observer {
         tableModel.setRowCount(0);
         
         for (Clima clima : climaList) {
-            tableModel.addRow( new Object[] {
-                clima.getData(),
+            tableModel.addRow(new Object[] {
+                DateService.formatDateBr(clima.getData()),
                 clima.getTemperatura(),
                 clima.getUmidade(),
                 clima.getPressao()

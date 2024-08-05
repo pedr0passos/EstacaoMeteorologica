@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package log;
 
 import java.io.BufferedWriter;
@@ -16,11 +12,12 @@ import java.time.LocalDateTime;
  * Pedro Henrique Passos
  * Catterina Salvador
  */
+
 public class JsonLog {
     public void gravarLogJson(String operacao) throws FileNotFoundException {
         File file = createFile();
         try {
-            BufferedWriter myWriter = new BufferedWriter(new FileWriter(file.getName(), true));
+            BufferedWriter myWriter = new BufferedWriter(new FileWriter(file, true));
             myWriter.write("{ \"log\": { ");
             myWriter.write("\"dataHora\" :" + "\"" + LocalDateTime.now().toString() + "\"" + ",");
             myWriter.write("\t\"operacao\" :" + "\"" + operacao + "\" } } ");
@@ -35,7 +32,7 @@ public class JsonLog {
 
     public File createFile() {
         try {
-            File json = new File("src\\main\\java\\RegistrosLog\\JsonLog.json");
+            File json = new File("src\\main\\java\\registros\\JsonLog.json");
             System.out.println(json.getAbsolutePath());
             if (json.createNewFile()) {
                 System.out.println("Arquivo criado: " + json.getName());

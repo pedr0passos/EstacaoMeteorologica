@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.JDesktopPane;
 import model.*;
 import observer.Observer;
+import service.DateService;
 import view.*;
 
 /**
@@ -22,6 +23,7 @@ public class UltimaAtualizacaoPresenter implements Observer {
         this.model = model;
         criarView();
         desktopPane.add(view);
+        limparDados();
     }
     
     private void criarView() {
@@ -56,17 +58,17 @@ public class UltimaAtualizacaoPresenter implements Observer {
     }
     
     public void atualizarDados(LocalDate data, Double temperatura, Double umidade, Double pressao) {
-        view.getLblDataResult().setText(String.valueOf(data));
-        view.getLblTemperaturaResult().setText(temperatura + "°C");
-        view.getLblUmidadeResult().setText(umidade + "%");
-        view.getLblPressaoResult().setText(pressao + " hPa");
+        view.getLblDataResult().setText(DateService.formatDateBr(data));
+        view.getLblTemperaturaResult().setText(String.format("%.2f°C", temperatura));
+        view.getLblUmidadeResult().setText(String.format("%.2f%%", umidade));
+        view.getLblPressaoResult().setText(String.format("%.2f hPa", pressao));
     }
     
     public void limparDados() {
         view.getLblDataResult().setText("Nenhuma Data");
-        view.getLblTemperaturaResult().setText("0");
-        view.getLblUmidadeResult().setText("0");
-        view.getLblPressaoResult().setText("0");
+        view.getLblTemperaturaResult().setText("0,00°C");
+        view.getLblUmidadeResult().setText("0,00%");
+        view.getLblPressaoResult().setText("0,00 hPa");
     }
     
     @Override

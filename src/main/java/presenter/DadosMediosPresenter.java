@@ -4,6 +4,7 @@ import javax.swing.JDesktopPane;
 import view.*;
 import model.*;
 import observer.Observer;
+import service.CalculadoraMediaService;
 
 /**
  * @author Catterina Salvador
@@ -14,11 +15,14 @@ public class DadosMediosPresenter implements Observer {
     
     private final ClimaModel model;
     private DadosMediosView view;
-
+    private final CalculadoraMediaService calculadoraMedia;
+    
     public DadosMediosPresenter(ClimaModel model, JDesktopPane desktopPane){
+        calculadoraMedia = new CalculadoraMediaService();
         this.model = model;
         criarView();
         desktopPane.add(view);
+        atualizarMedias();
     }
     
     private void criarView() {
@@ -26,22 +30,12 @@ public class DadosMediosPresenter implements Observer {
         this.view.setVisible(true);
     }
     
-    public void atualizarMedias() {
+    private void atualizarMedias() {
         var climaList = model.getClimaList();
         
-        double somaTemp=0;
-        double somaUmid=0;
-        double somaPress=0;
-        
-        for (Clima clima : climaList) {
-            somaTemp += clima.getTemperatura();
-            somaUmid += clima.getUmidade();
-            somaPress += clima.getPressao();
-        }
-        
-        double mediaTemp = climaList.isEmpty() ? 0 : somaTemp / climaList.size();
-        double mediaUmid = climaList.isEmpty() ? 0 : somaUmid / climaList.size();
-        double mediaPress = climaList.isEmpty() ? 0 : somaPress / climaList.size();
+        double mediaTemp = calculadoraMedia.calcularMediaTemperatura(climaList);
+        double mediaUmid = calculadoraMedia.calcularMediaUmidade(climaList);
+        double mediaPress = calculadoraMedia.calcularMediaPressao(climaList);
         
         view.getLblTempResult().setText(String.format("%.2f", mediaTemp) + "°C");
         view.getLblUmidResult().setText(String.format("%.2f", mediaUmid) + "%");

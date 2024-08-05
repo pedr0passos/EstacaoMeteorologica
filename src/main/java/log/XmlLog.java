@@ -19,7 +19,7 @@ public class XmlLog {
     public void gravarLogXml(String operacao) throws FileNotFoundException {
         File file = createFile();
         try {
-            BufferedWriter myWriter = new BufferedWriter(new FileWriter(file.getName(), true));
+            BufferedWriter myWriter = new BufferedWriter(new FileWriter(file, true));
             myWriter.write("<log>\n");
             myWriter.write("\t<dataHora>" + LocalDateTime.now().toString() + "</dataHora>\n");
             myWriter.write("\t<operacao>" + operacao + "</operacao>\n");
@@ -34,7 +34,7 @@ public class XmlLog {
 
     public File createFile() {
         try {
-            File xml = new File("src\\main\\java\\RegistrosLog","xmlLog.xml");
+            File xml = new File("src\\main\\java\\registros","xmlLog.xml");
             System.out.println(xml.getAbsolutePath());
             if (xml.createNewFile()) {
                 System.out.println("Arquivo criado: " + xml.getName());
